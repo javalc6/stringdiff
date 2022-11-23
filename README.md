@@ -36,3 +36,8 @@ If you load the html fragment with a browser, you get the following result:
 The longest common substrings are found using the LongestCommonSubstring (LCS) algorithm credited to https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LongestCommonSubstring.java.html
 
 Credits go to Robert Sedgewick and Kevin Wayne that provide the LCS algorithm with GNU General Public License
+
+# Caveat
+This algorithm based on LCS works well with ordinary texts. In case of specific domains it may produce sub-optimal results.
+
+As an example, consider the string "abceabceabce". If we remove the second 'b' letter, we get the string "abceaceabce". Using the LCS algorithm on these two strings, we get "ceabce" as LCS, i.e. the result from markTextDiff() is "ab<ins style='background-color:#00ff66'>cea</ins>ceabce<del style='background-color:#ff9933'>abce</del>", instead the optimal result should be "abcea<del style='background-color:#ff9933'>b</del>ceabce".
