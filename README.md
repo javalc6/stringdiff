@@ -17,16 +17,18 @@ java lcs.StringDiff
 
 # Example
 
+Setting the following strings:
 ```
 text1 = "Do not change this section. Please check any misqelling! Note that this section is obsolete.";
 text2 = "New section added. Do not change this section. Please check any mispelling!";
-
-Running the application with command "java lcs.StringDiff":
-
+```
+running the command "java lcs.StringDiff" will generate the following html fragment:
+```
 <ins style='background-color:#00ff66'>New section added. </ins>Do not change this section. Please check any mis<del style='background-color:#ff9933'>q</del><ins style='background-color:#00ff66'>p</ins>elling!<del style='background-color:#ff9933'> Note that this section is obsolete.</del>
 ```
 If you load the html fragment with a browser, you get the following result:
 
+![html fragment in a browser](diff_html_rendering.png)
 
 # Credits
 The longest common substrings are found using the LongestCommonSubstring (LCS) algorithm credited to https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LongestCommonSubstring.java.html
