@@ -18,7 +18,7 @@ public class StringDiff {
 
     private static final String INSERT_COLOR = "#00ff66";
     private static final String DELETE_COLOR = "#ff9933";
-    private static final int lcs_threshold = 3;//minimum threshold for longest common subsequence
+    private static final int lcs_threshold = 1;//minimum threshold for longest common subsequence
 
     public static void main(String[] args) {
 
